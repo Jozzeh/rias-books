@@ -15,13 +15,25 @@ fn main() {
         Migration {
             version: 1,
             description: "create_initial_tables",
-            sql: "CREATE TABLE books (id INTEGER PRIMARY KEY, isbn TEXT, title TEXT, price NUMBER); CREATE TABLE orders (id INTEGER PRIMARY KEY, orderDate DATETIME, lines TEXT); CREATE TABLE invoices (id INTEGER PRIMARY KEY, invoiceDate DATETIME, lines TEXT); CREATE TABLE creditnote (id INTEGER PRIMARY KEY, creditnoteDate DATETIME, lines TEXT);",
+            sql: "CREATE TABLE books (id INTEGER PRIMARY KEY, isbn TEXT, title TEXT, price NUMBER); CREATE TABLE orders (id INTEGER PRIMARY KEY, orderDate DATETIME, lines TEXT); CREATE TABLE invoices (id INTEGER PRIMARY KEY, invoiceDate DATETIME, lines TEXT); CREATE TABLE creditnotes (id INTEGER PRIMARY KEY, creditnoteDate DATETIME, lines TEXT);",
             kind: MigrationKind::Up,
         },
         Migration {
             version: 2,
             description: "update_books_table",
             sql: "ALTER TABLE books ADD author TEXT; ALTER TABLE books ADD coverImageUrl TEXT;",
+            kind: MigrationKind::Up,
+        },
+        Migration {
+            version: 3,
+            description: "update_orders_table",
+            sql: "ALTER TABLE orders ADD customer TEXT; ALTER TABLE invoices ADD customer TEXT; ALTER TABLE creditnotes ADD customer TEXT;",
+            kind: MigrationKind::Up,
+        },
+        Migration {
+            version: 4,
+            description: "add_settings_table",
+            sql: "CREATE TABLE settings (id INTEGER PRIMARY KEY, name TEXT, value TEXT);",
             kind: MigrationKind::Up,
         },
     ];
