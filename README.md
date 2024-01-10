@@ -1,6 +1,6 @@
-# Rias books
+# GRID books
 
-This is the main repository of the book application.  
+This is the main repository of the GRID book application.  
 It uses Tauri + Svelte + Typescript.
 
 ## Recommended IDE Setup

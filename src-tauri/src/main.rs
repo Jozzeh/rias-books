@@ -29,7 +29,7 @@ fn main() {
     tauri::Builder::default()
         .plugin(
             tauri_plugin_sql::Builder::default()
-                .add_migrations("sqlite:riasbooks.db", migrations)
+                .add_migrations("sqlite:grid.db", migrations)
                 .build(),
         )
         .invoke_handler(tauri::generate_handler![greet])
