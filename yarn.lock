@@ -263,7 +263,7 @@
     svelte-hmr "^0.15.3"
     vitefu "^0.2.5"
 
-"@tauri-apps/api@^1.5.2":
+"@tauri-apps/api@1.5.3", "@tauri-apps/api@^1.5.2":
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/@tauri-apps/api/-/api-1.5.3.tgz#f7b362b1f30aadb0a8bbeb7ae111755c0ed33d73"
   integrity sha512-zxnDjHHKjOsrIzZm6nO5Xapb/BxqUq1tc7cGkFXsFkGTsSWgCPH1D8mm0XS9weJY2OaR73I3k3S+b7eSzJDfqA==
@@ -900,6 +900,12 @@ svelte@^4.2.8:
     locate-character "^3.0.0"
     magic-string "^0.30.4"
     periscopic "^3.1.0"
+
+"tauri-plugin-sql-api@https://github.com/tauri-apps/tauri-plugin-sql#v1":
+  version "0.0.0"
+  resolved "https://github.com/tauri-apps/tauri-plugin-sql#a31253b6a3da1f97a8a815747761f7ab6c21420a"
+  dependencies:
+    "@tauri-apps/api" "1.5.3"
 
 to-regex-range@^5.0.1:
   version "5.0.1"
