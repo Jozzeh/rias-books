@@ -36,6 +36,12 @@ fn main() {
             sql: "CREATE TABLE settings (id INTEGER PRIMARY KEY, name TEXT, value TEXT);",
             kind: MigrationKind::Up,
         },
+        Migration {
+            version: 5,
+            description: "update_tables_with_company",
+            sql: "ALTER TABLE orders ADD company TEXT; ALTER TABLE invoices ADD company TEXT; ALTER TABLE creditnotes ADD company TEXT;",
+            kind: MigrationKind::Up,
+        },
     ];
 
     tauri::Builder::default()

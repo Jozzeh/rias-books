@@ -37,3 +37,16 @@ body {
 .content {
   grid-area: content;
 }
+
+/**
+ * SET PRINT STYLES HERE
+ **/
+@media print {
+  .sidebar{
+    display: none;
+    visibility: hidden;
+  }
+  .layout {
+    display: flex;
+  }
+}

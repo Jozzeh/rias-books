@@ -1,5 +1,5 @@
 {
-  "name": "riabook",
+  "name": "gridbooks",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@tauri-apps/api": "^1.5.2",
-    "tauri-plugin-sql-api": "https://github.com/tauri-apps/tauri-plugin-sql#v1",
-    "svelte-routing": "^2.11.0"
+    "svelte-routing": "^2.11.0",
+    "tauri-plugin-sql-api": "https://github.com/tauri-apps/tauri-plugin-sql#v1"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.0.1",

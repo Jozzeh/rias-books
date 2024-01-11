@@ -37,3 +37,54 @@ Example code:
     const newID = await db.execute("SELECT * FROM books");
     console.log(newID.lastInsertId)
 ```
+
+### Database structure
+
+**settings**
+
+| Name  | Type                  | Description              |
+| ----- | --------------------- | ------------------------ |
+| id    | number auto increment |                          |
+| name  | text                  | Name or key of the value |
+| value | text                  |                          |
+
+**books**
+
+| Name          | Type                  | Description |
+| ------------- | --------------------- | ----------- |
+| id            | number auto increment |             |
+| isbn          | text                  |             |
+| title         | text                  |             |
+| author        | text                  |             |
+| coverImageUrl | text                  |             |
+| price         | number                |             |
+
+**orders**
+
+| Name      | Type                  | Description                    |
+| --------- | --------------------- | ------------------------------ |
+| id        | number auto increment |                                |
+| orderDate | Datetime              |                                |
+| lines     | text                  | json string with product lines |
+| customer  | text                  | details of the customer        |
+| company   | text                  | details of the company         |
+
+**invoices**
+
+| Name        | Type                  | Description                    |
+| ----------- | --------------------- | ------------------------------ |
+| id          | number auto increment |                                |
+| invoiceDate | Datetime              |                                |
+| lines       | text                  | json string with product lines |
+| customer    | text                  | details of the customer        |
+| company     | text                  | details of the company         |
+
+**creditnotes**
+
+| Name           | Type                  | Description                    |
+| -------------- | --------------------- | ------------------------------ |
+| id             | number auto increment |                                |
+| creditnoteDate | Datetime              |                                |
+| lines          | text                  | json string with product lines |
+| customer       | text                  | details of the customer        |
+| company        | text                  | details of the company         |
