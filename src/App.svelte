@@ -1,4 +1,5 @@
 <script lang="ts">
+  import "iconify-icon";
   import { Router, Route } from "svelte-routing";
   import BooksPage from "./components/pages/BooksPage/BooksPage.svelte";
   import PurchaseOrderPage from "./components/pages/PurchaseOrderPage/PurchaseOrderPage.svelte";

@@ -91,6 +91,14 @@ input[type="submit"].tertairy {
   background-color: #fff;
   border: solid 1px #d9d9d9;
 }
+button.destroy,
+input[type="submit"].destroy {
+  color: rgba(192, 43, 43, 0.87);
+  background-color: transparent;
+  border: none;
+  height: auto;
+  padding: 0.2rem 1rem;
+}
 
 .layout {
   width: 100vw;
@@ -139,6 +147,19 @@ input[type="submit"].tertairy {
   border: solid 1px #ddd;
   border-radius: 0.2rem;
   font-size: 1rem;
+}
+.formInput {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.formInput input {
+  flex: 1;
+}
+.errorText {
+  font-size: 0.8rem;
+  color: rgb(205, 41, 41);
 }
 
 /**

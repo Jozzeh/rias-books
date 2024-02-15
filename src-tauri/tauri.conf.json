@@ -26,6 +26,11 @@
         "print": true,
         "unmaximize": true,
         "unminimize": true
+      },
+      "http": {
+        "all": true,
+        "request": true,
+        "scope": ["https://openlibrary.org/*"]
       }
     },
     "bundle": {

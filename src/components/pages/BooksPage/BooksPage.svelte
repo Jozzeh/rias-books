@@ -21,6 +21,19 @@
 
     //GET ALL BOOKS
     books = await db.select("SELECT * FROM books");
+    console.log(books);
+  }
+
+  /**
+   * @param {number} id
+   */
+  async function deleteBook(id) {
+    //GET DATABASE CONNECTION
+    const db = await getMainDb();
+
+    //GET ALL BOOKS
+    await db.execute("DELETE FROM books WHERE id=$1", [id]);
+    getBooks();
   }
 
   getBooks();
@@ -32,13 +45,15 @@
     <button
       on:click={() => {
         navigate("/books/create");
-      }}>+</button
+      }}><iconify-icon icon="mdi:plus"></iconify-icon></button
     >
   </div>
 </header>
 <main>
   <table>
-    <tr><th>id</th><th>isbn</th><th>titel / auteur</th><th>prijs (euro)</th></tr
+    <tr
+      ><th>id</th><th>isbn</th><th>titel / auteur</th><th>prijs (euro)</th><th>
+      </th></tr
     >
     {#each books as book}
       <tr>
@@ -49,7 +64,15 @@
           <br />
           <span class="bookListAuthor">van: {book.author} </span>
         </td>
-        <td>{book.price}</td>
+        <td>&euro; {Number(book.price) / 100}</td>
+        <td>
+          <button
+            class="destroy"
+            on:click={() => {
+              deleteBook(book.id);
+            }}><iconify-icon icon="mdi:trash"></iconify-icon></button
+          >
+        </td>
       </tr>
     {/each}
   </table>
