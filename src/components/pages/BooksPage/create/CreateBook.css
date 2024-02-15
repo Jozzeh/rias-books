@@ -1,0 +1,11 @@
+.bookCreateHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.bookCreateHeader div {
+  padding: 5px 15px;
+}
+.bookCreateTitle {
+  flex: 1;
+}

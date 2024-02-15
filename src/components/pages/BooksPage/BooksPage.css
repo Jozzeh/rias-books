@@ -1,0 +1,13 @@
+.bookListHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.bookListTitle {
+  flex: 1;
+}
+
+.bookListAuthor {
+  font-size: 0.7rem;
+}

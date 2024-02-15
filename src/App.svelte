@@ -1,10 +1,11 @@
 <script lang="ts">
-  import { Router, Link, Route } from "svelte-routing";
+  import { Router, Route } from "svelte-routing";
   import BooksPage from "./components/pages/BooksPage/BooksPage.svelte";
   import PurchaseOrderPage from "./components/pages/PurchaseOrderPage/PurchaseOrderPage.svelte";
   import InvoicesPage from "./components/pages/InvoicesPage/InvoicesPage.svelte";
   import CreditNotesPage from "./components/pages/CreditNotesPage/CreditNotesPage.svelte";
   import SideNavigation from "./components/elements/SideNavigation/SideNavigation.svelte";
+  import CreateBook from "./components/pages/BooksPage/create/CreateBook.svelte";
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,6 +20,7 @@
   <div class="content">
     <Router>
       <Route path="/" component={BooksPage} />
+      <Route path="/books/create" component={CreateBook} />
       <Route path="/orders" component={PurchaseOrderPage} />
       <Route path="/invoices" component={InvoicesPage} />
       <Route path="/creditNotes" component={CreditNotesPage} />
